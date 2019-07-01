@@ -11,9 +11,25 @@ let equal = () => {
     if(exp.value) exp.value = eval(exp.value);
 };
 
+const percentages = () => {
+    let exp = document.getElementById('textview');
+    let char;
+    for(let i = 0; i < exp.value.length; i++){
+        if(
+            exp.value[i] === '-' ||
+            exp.value[i] === '+' ||
+            exp.value[i] === '/' ||
+            exp.value[i] === '*'
+        ) char = exp.value[i];
+    };
+    let [first, second] = exp.value.split(char);
+    let res = first + char + first * (second / 100);
+    exp.value = eval(res);
+};
+
 let clean = () => {
-    let a = document.getElementById('textview');
-    a.value = a.value = '';
+    let textview = document.getElementById('textview');
+    textview.value = textview.value = '';
 };
 
 let remove = () => {
@@ -36,6 +52,8 @@ for(let i = 0; i < inputs.length; i++){
     ) input.onclick = () => insert(input.value);
 
     if(input.value === '=') input.onclick = () => equal();
+
+    if(input.value === '%') input.onclick = () => percentages();
 
     if(input.value === 'C') input.onclick = () => clean();
 
