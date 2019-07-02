@@ -45,7 +45,7 @@ for(let i = 0; i < inputs.length; i++){
     if(
         input.className !== 'textview' &&
         input.value !== 'C' &&
-        input.value !== '<' &&
+        input.value !== 'del' &&
         input.value !== '=' &&
         input.value !== '%'
 
@@ -57,5 +57,5 @@ for(let i = 0; i < inputs.length; i++){
 
     if(input.value === 'C') input.onclick = () => clean();
 
-    if(input.value === '<') input.onclick = () => remove();
+    if(input.value === 'del') input.onclick = () => remove();
 };

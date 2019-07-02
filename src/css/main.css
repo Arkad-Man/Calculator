@@ -5,12 +5,12 @@
 
 body{
     display: flex;
-    padding-top: 5rem;
+    background: #585858;
 }
 
 .container{
-    margin: 0 auto;
-    border: 1px solid red;
+    margin: 30% auto;
+    box-shadow: 0px 0px 30px -15px white;
 }
 
 form{
@@ -23,29 +23,42 @@ form{
     height: 2.5rem;
     padding: .2em;
     font-size: 1.8em;
+    border: none;
+    outline: none;
+    background: #b1dde7;
+    color: #355b61;
 }
 
 .btn-wrapper{
     display: grid;
     grid-gap: .125rem;
     grid-template-columns: 1fr 1fr 1fr 1fr;
-    margin: 0 .125rem .125rem .125rem;
+    margin: .05rem .125rem .125rem .125rem;
 }
 
 .btn-wrapper input{
     font-size: 1.8em; 
     padding: .75rem;
     cursor: pointer;
+    border: none;
+    background: #3e6970;
+    color: #b1dde7;
+    outline: none;
+}
+
+.btn-wrapper input:hover{
+    background: #528892;
+}
+
+.btn-wrapper input:nth-child(2),
+.btn-wrapper input:nth-child(16){
+    font-size: 1.5em;
 }
 
 .btn-wrapper input:nth-child(4){
     font-size: 2em;
     padding: 0;
     padding-top: 1rem;
-}
-
-.btn-wrapper input:nth-child(16){
-    grid-column: 4 / 5;
 }
 
 .btn-wrapper input:nth-child(19){
