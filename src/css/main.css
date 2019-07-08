@@ -9,8 +9,31 @@ body{
 }
 
 .container{
-    margin: 30% auto;
-    box-shadow: 0px 0px 30px -15px white;
+    position: relative;
+    margin: 10% auto;
+    background: #585858;
+    box-shadow: 0 1px 4px rgba(88, 88, 88, 0.3),
+                0 0 40px rgba(88, 88, 88, 0.1)
+                inset;
+}
+
+.container:before,
+.container:after{
+    content: "";
+    position: absolute;
+    z-index: -1;
+    box-shadow: 0 0 20px rgba(177, 221, 231, 0.8);
+    top: 2px;
+    bottom: 2px;
+    left: 10px;
+    right: 10px;
+    border-radius: 100px / 10px;
+}
+
+.container:after{
+    right: 10px;
+    left: auto;
+    transform: skew(8deg) rotate(3deg);
 }
 
 form{

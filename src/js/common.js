@@ -1,3 +1,5 @@
+import './render';
+
 const inputs = document.getElementsByTagName('input');
 
 let insert = (value) => {
